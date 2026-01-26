@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Happy Birthday HK! 🎂</title>
+    <meta name="description" content="A special birthday celebration website with love and joy!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="birthday.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Confetti Container -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- Fireworks Container -->
+    <canvas id="fireworks-canvas"></canvas>
+
+    <!-- Floating Sparkles -->
+    <div class="sparkles-container" id="sparklesContainer"></div>
+
+    <!-- Music Notes Animation -->
+    <div class="music-notes-container" id="musicNotesContainer"></div>
+
+    <!-- Party Poppers -->
+    <div class="party-poppers" id="partyPoppers"></div>
+
+    <!-- Birthday Music (plays in Special Moments section) -->
+    <audio id="birthdayMusic" loop>
+        <!-- Using a royalty-free birthday tune URL -->
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="Happy Birthday HK!">Happy Birthday HK!</h1>
+            <p class="subtitle">Today is YOUR special day! 🎊</p>
+            <div class="scroll-indicator">
+                <span>Scroll to celebrate</span>
+                <div class="arrow-down"></div>
+            </div>
+        </div>
+        <div class="floating-balloons">
+            <div class="balloon balloon-1">🎈</div>
+            <div class="balloon balloon-2">🎈</div>
+            <div class="balloon balloon-3">🎈</div>
+            <div class="balloon balloon-4">🎈</div>
+            <div class="balloon balloon-5">🎈</div>
+        </div>
+    </section>
+
+    <!-- Photo Carousel Section -->
+    <section class="photo-section">
+        <div class="container">
+            <h2 class="section-title">
+                Special Moments 📸
+            </h2>
+            <!-- Music Toggle Button -->
+            <button class="music-toggle" id="musicToggle">
+                <span class="music-icon">🎵</span>
+                <span class="music-text">Music On</span>
+            </button>
+            <div class="photo-carousel">
+                <button class="carousel-btn prev-btn" id="prevBtn">❮</button>
+                <div class="photo-frame">
+                    <div class="photo-container">
+                        <div class="photo-slider" id="photoSlider">
+                            <!-- Add your GitHub hosted images here -->
+                            <img class="carousel-photo active"
+                                src="https://github.com/Swethancyber/birthday/raw/refs/heads/main/img/1"
+                                alt="Memory 1"
+                                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23667eea%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2245%25%22 text-anchor=%22middle%22%3EPhoto 1%3C/text%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2216%22 x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22%3EAdd your photos!%3C/text%3E%3C/svg%3E'">
+                            <img class="carousel-photo"
+                                src="https://github.com/Swethancyber/birthday/raw/refs/heads/main/img/2"
+                                alt="Memory 2"
+                                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23764ba2%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2245%25%22 text-anchor=%22middle%22%3EPhoto 2%3C/text%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2216%22 x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22%3EAdd your photos!%3C/text%3E%3C/svg%3E'">
+                            <img class="carousel-photo"
+                                src="https://github.com/Swethancyber/birthday/raw/refs/heads/main/img/3"
+                                alt="Memory 3"
+                                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22/%3E%3Crect fill=%22%23f093fb%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2245%25%22 text-anchor=%22middle%22%3EPhoto 3%3C/text%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2216%22 x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22%3EAdd your photos!%3C/text%3E%3C/svg%3E'">
+                            <img class="carousel-photo"
+                                src="https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO/main/photo4.jpg"
+                                alt="Memory 4"
+                                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23f5576c%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2245%25%22 text-anchor=%22middle%22%3EPhoto 4%3C/text%3E%3Ctext fill=%22white%22 font-family=%22Arial%22 font-size=%2216%22 x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22%3EAdd your photos!%3C/text%3E%3C/svg%3E'">
+                        </div>
+                        <div class="photo-shine"></div>
+                    </div>
+                    <div class="carousel-indicators" id="carouselIndicators">
+                        <span class="indicator active" data-index="0"></span>
+                        <span class="indicator" data-index="1"></span>
+                        <span class="indicator" data-index="2"></span>
+                        <span class="indicator" data-index="3"></span>
+                    </div>
+                    <div class="photo-caption">
+                        <p id="photoCaption">✨ Best brother ever! Here's to another amazing year ✨</p>
+                    </div>
+                </div>
+                <button class="carousel-btn next-btn" id="nextBtn">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishes Section -->
+    <section class="wishes-section">
+        <div class="container">
+            <h2 class="section-title">Birthday Wishes 💝</h2>
+
+            <!-- Animated Gift Boxes -->
+            <div class="floating-gifts">
+                <div class="gift-box gift-1">🎁</div>
+                <div class="gift-box gift-2">🎁</div>
+                <div class="gift-box gift-3">🎁</div>
+                <div class="gift-box gift-4">🎁</div>
+            </div>
+
+            <!-- Floating Hearts -->
+            <div class="floating-hearts">
+                <div class="heart heart-1">💖</div>
+                <div class="heart heart-2">💖</div>
+                <div class="heart heart-3">💖</div>
+                <div class="heart heart-4">💖</div>
+                <div class="heart heart-5">💖</div>
+            </div>
+
+            <div class="wishes-grid">
+                <div class="wish-card">
+                    <div class="wish-icon">🌟</div>
+                    <h3>May Your Dreams Come True</h3>
+                    <p>Wishing you a year filled with amazing adventures, incredible achievements, and all the
+                        success you deserve!</p>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-icon">🎯</div>
+                    <h3>Success & Prosperity</h3>
+                    <p>You've always been amazing! May this year bring you even closer to all your goals and dreams!
+                    </p>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-icon">💖</div>
+                    <h3>Love & Laughter</h3>
+                    <p>Here's to more laughs, more memories, and more awesome times together! You're truly one of a
+                        kind!</p>
+                </div>
+                <div class="wish-card">
+                    <div class="wish-icon">🚀</div>
+                    <h3>New Adventures Await</h3>
+                    <p>This is YOUR year! Get ready for new adventures, epic moments, and everything you've been
+                        working towards!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="container">
+            <h2 class="section-title">It's Your Special Day! ⏰</h2>
+            <div class="countdown-display">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-divider">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-divider">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
+                </div>
+            </div>
+            <p class="countdown-message">of celebrating YOU!</p>
+        </div>
+    </section>
+
+    <!-- Interactive Cake Section -->
+    <section class="cake-section">
+        <div class="container">
+            <h2 class="section-title">Make a Wish! 🎂</h2>
+            <div class="cake-container">
+                <div class="cake" id="birthdayCake">
+                    <div class="candles">
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle">
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                    <div class="cake-layer layer-1"></div>
+                    <div class="cake-layer layer-2"></div>
+                    <div class="cake-layer layer-3"></div>
+                    <div class="cake-knife" id="cakeKnife">🔪</div>
+                    <div class="cake-slice" id="cakeSlice"></div>
+                </div>
+                <div class="cake-buttons">
+                    <button class="blow-button" id="blowButton">Blow Candles! 🌬️</button>
+                    <button class="cut-button" id="cutButton">Cut the Cake! 🍰</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section class="message-section">
+        <div class="container">
+            <div class="message-card">
+                <h2>To My Amazing HK 💌</h2>
+                <p class="message-text">
+                    Happy Birthday, HK! I'm so grateful to have you in my life.
+                    You've always been there for me, and today is all about celebrating YOU!
+                    May this year bring you everything you've been dreaming of -
+                    success, happiness, adventure, and all the good vibes you deserve!
+                </p>
+                <p class="signature">With love and best wishes! 🎉</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made with 💖 for an amazing person!</p>
+            <p class="footer-year">© 2026 - A Year of Possibilities</p>
+        </div>
+    </footer>
+
+    <script src="birthday.js"></script>
+</body>
+
+</html>
