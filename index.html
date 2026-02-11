@@ -777,6 +777,9 @@
                 <p class="section-subtitle">A collection of beautiful moments together</p>
             </div>
             <div class="gallery-grid">
+                
+You said:
+<div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/1.jpeg" alt="Memory 1">
                     <div class="gallery-overlay">
@@ -799,6 +802,252 @@
                     <img src="https://github.com/Swethancyber/birthday-website/blob/main/img/4.jpeg" alt="Memory 4">
                     <div class="gallery-overlay">
                         <p>Happy Memories</p>
+
+
+
+
+This is not working why get full code
+
+ChatGPT said:
+Your issue is the image URLs.
+
+Only the first image works because you're using the correct raw GitHub URL:
+
+https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/1.jpeg
+But the others use:
+
+https://github.com/Swethancyber/birthday-website/blob/main/img/2.jpeg
+That is a GitHub page link, not a direct image link — so the browser cannot load it as an image.
+
+✅ FIX
+Change all image URLs to use this format:
+
+https://raw.githubusercontent.com/USERNAME/REPO/BRANCH/PATH
+✅ Full Working Code (HTML + CSS)
+Here is the corrected and complete gallery section:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Gallery</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+</style>
+</head>
+
+<body>
+
+<div class="gallery-grid">
+
+    <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/1.jpeg" alt="Memory 1">
+        <div class="gallery-overlay">
+            <p>Beautiful Moment</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/2.jpeg" alt="Memory 2">
+        <div class="gallery-overlay">
+            <p>Unforgettable Time</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/3.jpeg" alt="Memory 3">
+        <div class="gallery-overlay">
+            <p>Special Day</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/4.jpeg" alt="Memory 4">
+        <div class="gallery-overlay">
+            <p>Happy Memories</p>
+You said:
+<div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/1.jpeg" alt="Memory 1">
+                    <div class="gallery-overlay">
+                        <p>Beautiful Moment</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://github.com/Swethancyber/birthday-website/blob/main/img/2.jpeg" alt="Memory 2">
+                    <div class="gallery-overlay">
+                        <p>Unforgettable Time</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://github.com/Swethancyber/birthday-website/blob/main/img/3.jpeg" alt="Memory 3">
+                    <div class="gallery-overlay">
+                        <p>Special Day</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://github.com/Swethancyber/birthday-website/blob/main/img/4.jpeg" alt="Memory 4">
+                    <div class="gallery-overlay">
+                        <p>Happy Memories</p>
+
+
+
+
+This is not working why get full code
+
+ChatGPT said:
+Your issue is the image URLs.
+
+Only the first image works because you're using the correct raw GitHub URL:
+
+https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/1.jpeg
+But the others use:
+
+https://github.com/Swethancyber/birthday-website/blob/main/img/2.jpeg
+That is a GitHub page link, not a direct image link — so the browser cannot load it as an image.
+
+✅ FIX
+Change all image URLs to use this format:
+
+https://raw.githubusercontent.com/USERNAME/REPO/BRANCH/PATH
+✅ Full Working Code (HTML + CSS)
+Here is the corrected and complete gallery section:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Gallery</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f8f8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+</style>
+</head>
+
+<body>
+
+<div class="gallery-grid">
+
+    <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/1.jpeg" alt="Memory 1">
+        <div class="gallery-overlay">
+            <p>Beautiful Moment</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/2.jpeg" alt="Memory 2">
+        <div class="gallery-overlay">
+            <p>Unforgettable Time</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/3.jpeg" alt="Memory 3">
+        <div class="gallery-overlay">
+            <p>Special Day</p>
+        </div>
+    </div>
+
+    <div class="gallery-item">
+        <img src="https://raw.githubusercontent.com/Swethancyber/birthday-website/main/img/4.jpeg" alt="Memory 4">
+        <div class="gallery-overlay">
+            <p>Happy Memories</p>
                     </div>
                 </div>
             </div>
